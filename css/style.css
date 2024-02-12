@@ -1135,18 +1135,3 @@ a.btn-learn:hover {
 }
 
 /*Basic-Stylesheets-End-Here*/
-
-@media screen (max-width: 768px;) {
-    #pre-status,
-.preload-placeholder {
-    /* background-image: url(../gradient-5812_256.gif);
-    background-position: center;
-    background-repeat: no-repeat; */
-    height: 296px;
-    left: 18%;
-    margin: -20px 0 0 -20px;
-    position: absolute;
-    top: 32%;
-    width: 296px;
-}
-}
