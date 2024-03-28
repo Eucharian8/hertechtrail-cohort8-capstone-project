@@ -56,6 +56,20 @@ body {
 /* ========================================================================
   Hover animation
  ========================================================================== */
+@keyframes spin {
+    50% { transform: rotate(0deg);
+    }
+    50% { transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+}
 @-webkit-keyframes hvr-pulse {
     25% {
         -webkit-transform: scale(1.1);
@@ -75,6 +89,14 @@ body {
         -webkit-transform: scale(0.9);
         transform: scale(0.9);
     }
+}
+.preloader-placeholder {
+    -webkit-animation-name: spin;
+    animation-name: spin;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
 }
 .hvr-pulse {
     display: inline-block;
@@ -108,28 +130,34 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 9999;
+    z-index: 1;
 }
 #pre-status,
 .preload-placeholder {
-    background-image: url(../gradient-5812_256.gif);
+    /* background-image: url(../gradient-5812_256.gif); */
     background-position: center;
     background-repeat: no-repeat;
-    height: 296px;
-    left: 38%;
-    right: 38%;
-    margin: -20px 0 0 -20px;
+    border: 16px solid blueviolet;
     position: absolute;
-    top: 32%;
-    width: 296px;
+    border-radius: 50%;
+    border-top: 16px blueviolet;
+    border-bottom: 16px blueviolet;
+    height: 200px;
+    left: 50%;
+    right: 50%;
+    margin: -100px 0 0 -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 200px;
 }
-.preload-placeholder {
+/* .preload-placeholder {
     background: none;
     left: 0;
     margin: 0;
     text-align: center;
-    top: 65%;
-}
+    top: 50%;
+} */
 .parallex {
     background-attachment: fixed;
     background-position: center;
@@ -333,6 +361,8 @@ ul.nav li.active a:before {
 }
 .carousel-caption h1 {
     font-size: 35px;
+    margin-top: 70px;
+    margin-left: 15px;
     margin-bottom: 10px;
     letter-spacing: 2px;
     font-weight: 100;
@@ -342,6 +372,7 @@ ul.nav li.active a:before {
     font-size: 75px;
     font-weight: 600;
     margin-top: 0px;
+    margin-left: 15px;
     text-transform: none;
     letter-spacing: 2px;
     margin-bottom: 20px;
@@ -349,6 +380,7 @@ ul.nav li.active a:before {
 .carousel-caption p {
     color: #ffffff;
     font-size: 17px;
+    margin-left: 15px;
     font-weight: normal;
     line-height: 27px;
 }
@@ -507,7 +539,7 @@ ul.nav li.active a:before {
     transform: rotateY(360deg);
     -moz-transform: rotate(360deg);
     -o-transform: rotate(360deg);
-    -webkittransform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
     transition: all 0.5s;
     -moz-transition: all 0.8s;
     -o-transition: all 0.8s;
@@ -786,7 +818,7 @@ ul.nav li.active a:before {
     font-weight: bold;
 }
 .contact-sec-1 ul.contact-form li i.fa {
-    color: #666;
+    color: blueviolet;
     float: left;
     margin-right: 10px;
 }
@@ -823,6 +855,7 @@ label {
 }
 .form-group {
     margin-bottom: 30px;
+    border-color: blueviolet;
 }
 textarea.form-control {
     min-height: 120px;
@@ -832,7 +865,8 @@ textarea.form-control {
     border: 1px solid #ccc;
     height: 35px;
     border-radius: 0;
-    box-shadow: none;
+    box-shadow: blueviolet;
+    border-color: blueviolet;
 }
 /*Footer-stylesheets-include-here*/
 #footer {
@@ -862,9 +896,9 @@ textarea.form-control {
     margin-right: 20px;
 }
 #footer-down ul li a i.fa {
-    color: #999;
+    color: blueviolet;
     font-size: 22px;
-    border: 2px solid #999;
+    border: 2px solid blueviolet;
     height: 50px;
     width: 50px;
     border-radius: 50px;
